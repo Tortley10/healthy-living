@@ -13,5 +13,8 @@ Excercise Calculator
 Loading screen with tips
 full tips and tricks section
 Quiz
+    Unlock more Quiz
+    More Points
+    Leaderboard
 Chat Bot
 Log In
