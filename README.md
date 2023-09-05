@@ -14,3 +14,4 @@ Loading screen with tips
 full tips and tricks section
 Quiz
 Chat Bot
+Log In
