@@ -18,3 +18,4 @@ Quiz
     Leaderboard
 Chat Bot
 Log In
+Responsive
