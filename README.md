@@ -20,3 +20,4 @@ Chat Bot
 Log In
 Responsive
 BMI
+Blog
