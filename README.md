@@ -8,6 +8,9 @@ Promoting healthy living is a global imperative, given the rising prevalence of 
 **Hyper Health**
 
 Nutrition Calculator
+Calorie Calculator
 Excercise Calculator
 Loading screen with tips
 full tips and tricks section
+Quiz
+Chat Bot
