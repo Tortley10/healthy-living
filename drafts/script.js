@@ -5,7 +5,7 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
 let points = 0
-pointcounter.innerText = points
+document.getElementById("pointcount").innerHTML=points;
 let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
