@@ -4,10 +4,10 @@
 {% endblock %}
 {% block content %}
 <div class="wrapper">
-    <form method="post" action="">
+    <form method="post" action="" class="mt-1 mb-1">
         {{ form.hidden_tag() }}
         <fieldset class="mt-1 mb-1">
-            <h1 id="logintitle">Log In to Healthier</h1>
+            <h1 class="fw-bold" id="logintitle">Log In to Healthier</h1>
             <div>
                 <div class="mt-1 mb-1">
                     {{ form.username.label(class="form-control-label") }}
@@ -20,11 +20,13 @@
             </div>
         </fieldset>
         <div id="subbutton" class="mt-1 mb-1">
-            {{ form.submit(class="btn btn-outline-info") }}
+            {{ form.submit(class="btn btn-outline-info btn-primary") }}
         </div>
     </form>
-    <small class="text-muted">
+    <br>
+    <small class="text-muted mt-1 mb-1">
         Dont have an account? <a href="{{ url_for('register') }}">Sign Up</a>
     </small>
 </div>
+
 {% endblock content %}
