@@ -1,0 +1,245 @@
+<head>
+    <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css">
+        <title>Simple Calorie Calculator using JavaScript - @code.scientist x @codingtorque</title>
+    </head>
+    <body>
+        <div id="bmr-calculator" class="wrapper">
+        <div class="calculator">
+            <div class="choose-gender">
+                <div class="segmented-control"><input id="calc-gender-male" type="radio" name="gender" value="male"
+                        checked=""><label for="calc-gender-male">Male</label></div>
+                <div class="segmented-control">
+                    <input id="calc-gender-female" type="radio" name="gender" value="female"><label
+                        for="calc-gender-female">Female</label>
+                </div>
+            </div>
+            <label for="calc-age" id="calc-age_value">Age: </label>
+            <input id="calc-age" type="text" value="25" min="13" max="100"><br>
+            <label for="calc-height" id="calc-height_value">Height: </label>
+            <input id="calc-height" type="text" value="180" min="80" max="250">cm<br>
+            <label for="calc-weight" id="calc-weight_value">Weight: </label>
+            <input id="calc-weight" type="text" value="70" min="40" max="200">kg<br>
+            <label for="calc-walking" id="calc-walking_value">Walking: </label>
+          <input id="calc-walking" type="text" value="2" min="0" max="50">hours per week<br>
+            <label for="calc-cardio" id="calc-cardio_value">Cardio: </label>
+            <input id="calc-cardio" type="text" value="1" min="0" max="50">hour per week<br>
+        </div>
+        <div class="results">
+            <div id="calc-target-gain">
+                To Gain Weight:<br>
+                <span>2500 calories</span>
+            </div>
+            <div id="calc-target-maintain">
+                To Maintain:<br>
+                <span>2200 calories</span>
+            </div>
+            <div id="calc-target-lose">
+                To Lose Weight:<br>
+                <span>1700 calories</span>
+          </div>
+        </div>
+    </div> 
+        <script src="https://code.jquery.com/jquery-3.6.3.js"
+            integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+    </html>
+
+<style>
+    :root {
+  --primary-color: #435fda;
+  --secondary-color: #0000FF;
+  --body-font-size: 16px;
+  --line-height: 1.5;
+  --content-width: 480px;
+  --background-color: azure;
+  --background-color-secondary: #f8f8f9;
+  --text-color: #060914;
+  --text-color--muted: #71737f;
+  --line-color: #ededef;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #657bdb;
+    --primary-color--translucent: rgba(85, 106, 195, 0.3);
+    --secondary-color: #d93d59;
+    --background-color: #060913;
+    --background-color-secondary: #0f1424;
+    --text-color: #e4e4e7;
+    --text-color--muted: #838690;
+    --line-color: #303341;
+  }
+}
+html {
+  font-size: 100%;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+body {
+  font-family: "Geomanist", sans-serif;
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
+  padding: 0.5em 0.5em 2em 0.5em;
+  margin: 0;
+}
+.wrapper {
+  max-width: var(--content-width);
+  margin: calc(var(--line-height) * 0.5em) auto 0 auto;
+}
+.results {
+  margin-top: 0.5em;
+  text-align: center;
+}
+.results > div {
+  margin-bottom: 0.5em;
+}
+@media (min-width: 440px) {
+  :root {
+    --body-font-size: 18px;
+    --line-height: 1.5;
+  }
+  .results {
+    margin: 2em 1em 0 2em;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1em;
+  }
+  .results > div {
+    margin-bottom: 0;
+  }
+}
+.choose-gender {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 2em;
+}
+.segmented-control {
+  flex: 1;
+  text-align: center;
+  line-height: 2em;
+  border: 1px solid var(--line-color);
+}
+.segmented-control:first-child {
+  border-radius: 0.5em 0 0 0.5em;
+}
+.segmented-control:last-child {
+  border-radius: 0 0.5em 0.5em 0;
+}
+.results {
+  color: var(--text-color--muted);
+}
+.results span {
+  font-weight: 500;
+  color: var(--text-color);
+}
+/* The crazy stuff that needs to be here for the custom input styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 100%;
+  transition: all 0.265ms ease-out;
+}
+input[type="range"]:not(:last-of-type) {
+  margin-top: 0;
+  margin-bottom: 2.5em;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: var(--line-color);
+}
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0 0 8px 1px var(--secondary-color),
+    0 0 16px 4px var(--background-color);
+  border: 3px solid #fff;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: var(--secondary-color);
+}
+input[type="radio"] {
+  -webkit-appearance: none;
+  display: none;
+}
+.segmented-control input[type="radio"] + label {
+  border: 1px solid rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  color: var(--text-color--muted);
+}
+.segmented-control input[type="radio"]:checked + label {
+  background-color: var(--line-color);
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: var(--text-color);
+}
+.segmented-control input[type="radio"]:focus + label {
+  border: 1px solid var(--secondary-color);
+}
+.segmented-control:first-child input[type="radio"]:checked + label {
+  border-radius: 0.5em 0 0 0.5em;
+}
+.segmented-control:last-child input[type="radio"]:checked + label {
+  border-radius: 0 0.5em 0.5em 0;
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: var(--line-color);
+}
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 0 0 8px 1px var(--secondary-color),
+    0 0 16px 4px var(--background-color);
+  border: 3px solid #fff;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+}
+</style>
+
+<script>
+    $(".calculator input").on("input change", function (event) {
+    var parameterName = $(this).attr("id").split("calc-")[1];
+    var centimeters = $(this).val()
+    var height = parseInt($("#calc-height").val(), 10);
+    var age = parseInt($("#calc-age").val(), 10);
+    var weight = parseInt($("#calc-weight").val(), 10);
+    var walking = parseInt($("#calc-walking").val(), 10);
+    var cardio = parseInt($("#calc-cardio").val(), 10);
+    var gender = $(".calculator input[name='gender']:checked").val();
+    // The Harris–Benedict equations revised by Mifflin and St Jeor in 1990: 'A new predictive equation for resting energy expenditure in healthy individuals'
+    var bmr = parseInt(10 * weight + 6.25 * height - 5 * age, 10) + (gender === "male" ? 5 : -161);
+    bmr = bmr * 1.2;
+    bmr += walking * 60 * (.03 * weight * 1 / 0.45) / 7;
+    bmr += cardio * 60 * (.07 * weight * 1 / 0.45) / 7;
+    bmr = Math.floor(bmr);
+    var targetGainWeight = Math.round((bmr + 300) / 100) * 100;
+    var targetMaintain = Math.round((bmr) / 100) * 100;
+    var targetLoseWeight = Math.round((bmr - 500) / 100) * 100;
+    $("#calc-target-gain span").html(targetGainWeight + " calories");
+    $("#calc-target-maintain span").html(targetMaintain + " calories");
+    $("#calc-target-lose span").html(targetLoseWeight + " calories");
+});
+</script>
