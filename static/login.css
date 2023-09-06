@@ -9,6 +9,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   min-height: 100vh;
   background-color: #f4f4f4;
 }
@@ -17,16 +18,16 @@ body {
   width: 420px;
 }
 
-.wrapper h1 {
-  font-size: 2.2em;
-  font-weight: 500px;
-  text-align: center;
-}
-
 .wrapper div {
   margin: 30px auto;
 }
 
 .btn {
   outline-color: red;
+}
+
+#logintitle {
+  font-size: 2.2em;
+  font-weight: 500px;
+  text-align: center;
 }

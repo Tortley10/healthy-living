@@ -3,11 +3,10 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'login.css') }}">
 {% endblock %}
 {% block content %}
-<div>
+<div class="wrapper">
     <form method="post" action="">
         {{ form.hidden_tag() }}
-        <fieldset>
-            <h1>Join Today</h1>
+            <h1 id="logintitle">Login</h1>
             <div>
                 <div>
                     {{ form.username.label(class="form-control-label") }}
