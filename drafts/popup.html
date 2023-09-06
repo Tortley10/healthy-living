@@ -10,18 +10,12 @@
 
         <script>
             var release = new Date().getTime() + 1000;
-        
-            // Sets the countdown date
 
             var x = setInterval(function() {
 
                 var now = new Date().getTime();
 
-                // Gets current date
-
                 var diff = release - now;
-
-                // Finds the distance between now and the release date
                 
                 if (diff < 0) {
                     countdown.style.display = "block";
@@ -30,7 +24,7 @@
                 }
             }, 1000);
 
-            //Code adapted from W3 Schools
+            
 
         </script>
     </head>
