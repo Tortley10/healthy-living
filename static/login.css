@@ -31,3 +31,11 @@ body {
   font-weight: 500px;
   text-align: center;
 }
+
+.mt-1 {
+  margin-top: .25rem;
+}
+
+.mb-1 {
+  margin-bottom: .5rem;
+}

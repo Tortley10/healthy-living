@@ -6,19 +6,20 @@
 <div class="wrapper">
     <form method="post" action="">
         {{ form.hidden_tag() }}
+        <fieldset class="mt-1 mb-1">
             <h1 id="logintitle">Login</h1>
             <div>
-                <div>
+                <div class="mt-1 mb-1">
                     {{ form.username.label(class="form-control-label") }}
                     {{ form.username(class="form-control form-control-lg") }}
                 </div>
-                <div>
+                <div class="mt-1 mb-1">
                     {{ form.password.label(class="form-control-label") }}
                     {{ form.password(class="form-control form-control-lg") }}
                 </div>
             </div>
         </fieldset>
-        <div id="subbutton">
+        <div id="subbutton" class="mt-1 mb-1">
             {{ form.submit(class="btn btn-outline-info") }}
         </div>
     </form>
