@@ -21,3 +21,11 @@ Promoting healthy living is a global imperative, given the rising prevalence of 
 - Responsive
 - BMI
 - Blog
+
+---
+## Installation:
+Just 3 simple steps.
+
+1. Open Code in GitHub Desktop.
+2. Clone Repository.
+3. Run Code in Visual Studio Code.
