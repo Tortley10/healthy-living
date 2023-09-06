@@ -24,6 +24,7 @@
                 // Finds the distance between now and the release date
                 
                 if (diff < 0) {
+                    countdown.style.display = "block";
                     clearInterval(x);
                     document.getElementById("countdown").innerHTML = "Your Mother is Gay"
                 }
@@ -35,10 +36,7 @@
     </head>
 
     <body>
-        <div>
-            <h1>Release of ZONE by Jihyo</h1>
-            <p id = 'countdown'></p>
-        </div>
+        <p id = 'countdown'></p>
     </body>
 
 

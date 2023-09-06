@@ -1,0 +1,14 @@
+#countdown {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    background-color: royalblue;
+    max-width: 100%;
+    color: black;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-weight: bold;
+    padding: 15px;
+}
