@@ -3,8 +3,9 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+const pointsElement = document.getElementById('points')
 
-let points = 0
+var points = 0
 let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
@@ -35,7 +36,8 @@ function showQuestion(question) {
     button.classList.add('btn')
     if (answer.correct) {
       button.dataset.correct = answer.correct
-      points += 1
+      points = points + 1
+      pointsElement.innerText = points
     }
     button.addEventListener('click', selectAnswer)
     answerButtonsElement.appendChild(button)
