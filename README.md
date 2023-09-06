@@ -1,4 +1,4 @@
-**Healthy Living: Healthier**
+#Healthy Living: Healthier
 
 Code Overflow Hackathon, Website.
 
