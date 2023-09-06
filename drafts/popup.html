@@ -1,44 +1,303 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        var release = new Date("18 August, 2023 13:00:00").getTime();
+<!DOCTYPE html>
+<html lang = 'en'>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Twebsite</title>
+        <link rel = "icon" type = "images" href = 'images/logo.png'>
+        <link rel="stylesheet" type= "text/css" href="fancy.css">
 
-        // Sets the countdown date
+        <script>
+            var release = new Date("18 August, 2023 13:00:00").getTime();
 
-        var x = setInterval(function() {
+            // Sets the countdown date
 
-            var now = new Date().getTime();
+            var x = setInterval(function() {
 
-            // Gets current date
+                var now = new Date().getTime();
 
-            var diff = release - now;
+                // Gets current date
 
-            // Finds the distance between now and the release date
+                var diff = release - now;
 
-            var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                // Finds the distance between now and the release date
 
-            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+                var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+                
+                if (diff < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "Zone has been released!"
+                }
+            }, 1000);
+
+            //Code adapted from W3 Schools
+
+        </script>
+    </head>
+
+    <body>
+        <header>
+
+            <a href = '#' id="back">Back to Top</a>
+
+            <div id = 'navi'>
+                <nav>
+                    <a href = '#' class = "current">Home</a></li>
+                    <a href = 'members.html'>Members</a></li>
+                    <a href = 'discor.html'>Discography</a></li>
+                </nav>
+            </div>
+
+            <div>
+                
+                <img src = 'images\logo.png' alt = 'TWICE Logo' class = "logo">
+
+                <h1 class = "title">Twebsite <br> &#40;An Unofficial Fansite&#41;</h1>
+            </div>
+
+            <div>
+                <h1>Release of ZONE by Jihyo</h1>
+                <p id = 'countdown'></p>
+            </div>
+
+            <h1>Home</h1>
+
+                <div class="contents">
+                    <h2>Content</h2>
+
+                    <ul>
+                        <li><a href = '#1'>1&colon; TWICE</a></li>
+                        <li><a href = '#2'>2&colon; Pre-Debut</a></li>
+                        <li><a href = '#3'>3&colon; The Story Begins</a></li>
+                        <li><a href = '#4'>4&colon; Rise to Stardom</a></li>
+                        <li><a href = '#5'>5&colon; Continued Success</a></li>
+                        <li><a href = '#6'>6&colon; At the Top</a></li>
+                        <li><a href = '#7'>7&colon; Changing Times</a></li>
+                        <li><a href = '#8'>8&colon; COVID-19</a></li>
+                        <li><a href = '#9'>9&colon; Present Day</a></li>
+                    </ul>
+                </div>
+
+        </header>
+
+        <section id ='1'>
+            <h2>1&colon; TWICE</h2>
+            <img src = 'images/TWICE.jpg' alt = "TWICE Members lined up in a row" class = "OT9">
+            <p id = "imagetext">From Left to Right:</p>
+            <p id = "imagetext">Jeongyeon, Nayeon, Tzuyu, Chaeyoung, Dahyun, Jihyo, Mina, Sana, Momo</p>
+            <p id = "imagetext">Taken from the TWICE Youtube Channel</p>
+
+            <p>TWICE is a South Korean Girl Group founded by JYP Entertainment. They have been dubbed &quot;The Nation's Girl Group&quot; and have been instrumental in the 3rd Generation of Kpop and the spread of the Korean Wave, especially in Japan which has led to improved relations between South Korea and Japan.</p>
+
+            <p>The group is composed of nine members: Im Na&ndash;yeon, Soo Jeong&ndash;yeon, Hirai Momo, Minatozaki Sana, Park Ji&ndash;hyo, Myoi Mina, Kim Da&ndash;hyun, Son Chae&ndash;young, and Chou Tzu&ndash;yu.</p>
+
+            <p>They debuted in 2015 and have since been very active, releasing 7 Studio Albums, 12 EP&apos;s, 1 Reissue Studio Album, 3 Reissue EP&apos;s, 4 Compilation Albums, and 1 Compilation EP&apos;s. With a total of 204 songs. They were known in the past for their cutesy pop sound. However, they have since experimented with more mature styles, along with experimenting with different genres such as EDM, Synth-Pop, Retro Soul, and nearly every other music genre out there from Rock to Latin Pop.</p>
+        </section>
+
+        <section id = '2'>
+            <h2>2&colon; Pre-Debut</h2>
+            <img src = 'images/sixteen.jpg' alt = "Contestants of the show Sixteen" class = "sixteen">
+            <p id = "imagetext">Poster featuring the contestants of the survival show "Sixteen"</p>
+
+            <p>In 2013 JYP Entertainment announced that they will debut a new girl group in 2014, the first girl group the company would debut since 'Miss A' in 2010. That group's name was 6MIX. But unfortunately, 6MIX would disband after two of their members left the company. </p>
+
+            <p>In 2015, Park Jin-young (JYP), founder of JYP Entertainment, hosted 'Sixteen', a competition survival show in which the winners would get to debut in JYP's newest girl group.</p>
+
+            <p>After two months and ten episodes of grueling competition, seven winners came out on top: Nayeon, Jeongyeon, Sana, Jihyo, Mina, Dahyun, and Chaeyoung. Then JYP decided to add into the group two previously eliminated contestants, adding Tzuyu as audiences really liked her, and Momo who JYP added as he felt that the group needed her talent in dance.</p>
+
+            <p>The members often refer to this show as the reason for the strong bonds between them.</p>
+
+            <p>Thus, TWICE <span lang="ko-Hang">&#40;트와이스&#41;</span> was born.</p>
+        </section>
+
+        <section id = '3'>
+            <h2>3&colon; The Story Begins</h2>
+            <img src = 'images/Debut.jpeg' alt = "Debut photo" class= "debut">
+            <p id = "imagetext">Scene from the "Like Ooh-Ahh" Music Video</p>
+            <p>TWICE debuted on the 30th of October 2015 with their first EP &quot;The Story Begins&quot; alongside their first single &quot;Like Ooh-Ahh&quot;. Their EP peaked at number 3 on the Circle Album Chart. Their single, would reach number 10 on the Circle Digital Chart three months after its lackluster release. This was thanks to word of mouth which was unusual for a Kpop group.</p>
+
+            <p>The music video for &quot;Like Ooh-Ahh&quot; would hit 50 million views in five months making it one of the most viewed debut music videos by any K-Pop group at the time. TWICE's early success would allow them to earn a &quot;Best New Female Artist&quot; Award at the 2015 MNET Asian Music Awards.</p>
+        </section>
+
+        <section id = '4'>
+            <h2>4&colon; Rise to Stardom</h2>
+
+            <img src = "images/cheer_up.jpg" alt = "Page Two Album Cover" class = "pagetwo">
+            <p id = "imagetext">Page Two Album Cover</p>
+
+
+            <p>TWICE announced the official fandom name called &quot;Once&quot;. As quoted from the official TWICE Instagram account: </p>
+
+            <p>&quot;A lot of fans liked &apos;Once,&apos; &apos;Once and TWICE.&apos; Once then TWICE. They seem to go together. If you love us even once, we'll repay you with TWICE our love. It's difficult to connect with people, and getting people to love is the most difficult of all. We'll work hard so that you can look at us once, and fall in love with us TWICE. Be with us until the end. We love you. &lt;3.&quot;</p>
+                
+            <p>On the 15th of April 2016, TWICE's second EP was released, <i>Page Two</i> along with the single &quot;Cheer Up&quot;. The EP was a commercial success, peaking at number two on the Circle Album Chart and number six on the Billboard World Albums Chart</p>
+
+            <p>TWICE began to be more widely known amongst the general public with their EP achieving the highest first week sales for a Korean Girl Group in 2016. &quot;Cheer Up&quot; would peak at number one on the Circle Digital Chart and Billboard K-Pop Hot 100 chart. The song would also gain national popularity and skyrocket TWICE&apos;s career along with Sana&apos;s iconic &quot;Shy Shy Shy&quot; line becoming an internet meme. During the 2017 South Korean Presidential Elections, Candidate Moon Jae-in used &quot;Cheer Up&quot; with modified lyrics as their campaign jingles. Moon Jae-in would later win the election. It peaked at number three on the Billboard World Digital Song Sales Chart. </p>
+
+            <p>On the one year anniversary of their debut, TWICE showcased the song &quot;One In A Million&quot; from their upcoming third EP &quot;Twicecoaster: Lane 1&quot; on a VLive. Four days later, the EP would be released along with its lead single &quot;TT&quot;, which would go on to top the Circle Digital Chart for four weeks straight.</p>
+
+            <p>TWICE would have their first concert on the 17th of February 2017 as part of the &quot;Twice 1st Tour: Twiceland &ndash; The Opening&quot;. They performed in Seoul, Bangkok, and Singapore.</p>
+
+            <p>Three days after their first concert, TWICE would release a reissue of &quot;Twicecoaster: Lane 1&quot; titled &quot;Twicecoaster: Lane 2&quot; with its lead single &quot;Knock Knock&quot;.</p>
+        </section>
+
+        <section id = '5'>
+            <h2>5&colon; Continued Success</h2>
+
+            <img src = "images/Twicetagram.jpg" alt = "Album cover of Twicetagram" class = "twgram">
+            <p id = "imagetext">Album cover of Twicetagram</p>
+
+            <p>On May 15 2017, TWICE released their fourth EP &quot;Signal&quot; along with its lead single of the same name. The EP contains the song &quot;Eye Eye Eye&quot; which was co-written by Jihyo and Chaeyoung, making it the first song to be co-written by a member of the group. By the end of May, the album was the second-best selling album in South Korea, with it debuting at the top of the Circle Album Chart in its first week. Meanwhile, the album's lead single debuted at the top of the Circle Digital Chart and Billboard Kpop Hot 100. With the success of their 5th EP, TWICE managed to reach over a million total sales across their 5 albums in just  one year and seven months.</p>
+
+            <p>TWICE made landfall in Japan with their first Japanese Album, the compilation album &quot;&num;Twice&quot; which contained Japanese versions of their previous songs, on June 28. The album sold over a 100,000 copies in the first week, the highest first week album sales for a Kpop group in two years. This could be due to the fact that the group has three Japanese members.</p>
+
+            <p>On the 2nd of July, TWICE performed their first concert in Japan at the Tokyo Metropolitan Gymnasium as part of debut in Japan.</p>
+
+            <p>On October 18, TWICE released their first Japanese single &quot;One More Time&quot;. Both their album and single would obtain platinum certifications from the Recording Industry Association of Japan, being the first Kpop girl group to do so in the same year.</p>
+
+            <p>On October 30,  Twice released their first ever Korean album &quot;Twicetagram&quot; along with its hit single &quot;Likey&quot; which touched on the struggles of social media and maintaining a perfect image whilst keeping TWICE&apos;s usual catchy and upbeat tune. The album debuted at number one on the Billboard&apos;s World Albums and World Digital Song Sales Charts. This made TWICE the first female Kpop group to top both charts simultaneously.</p>
+
+            <p>Later that year, on December 11th, a Christmas themed reisue of &quot;Twicetagram&quot; was released titled &quot;Merry &amp; Happy&quot; alongside its lead single &quot;Heart Shaker&quot;. Both the album and the single debuted at the top of all four Circle Charts.</p>    
+        </section>
+
+        <section id ='6'>
+            <h2>6&colon; At the Top</h2>
+
+            <img src = "images/what_is_love.jpg" alt = "Album cover for What is Love?" class = "whatisluv">
+            <p id = "imagetext">Album cover for What is Love&quest;</p>
+
+            <p>By 2018, TWICE began to be known as one of the Big Three Girl Groups of the 3rd Generation of Kpop along with Blackpink and Red Velvet. Some even considered the group to be the successor to Girls Generation.</p>
+
+            <p>TWICE released their second Japanese single &quot;Candy Pop&quot; on the 7th of February 2018. The song, as you would expect, is pure bubblegum pop. It would go on to obtain platinum certification from the Recording Industry Association of Japan and its accompanying music video would be the most viewed Japanese music video by a Kpop group. On the 19th of January 2018, TWICE embarked on their first concert tour in Japan which ended on the 1st of February.</p>
+
+            <p>On the 9th of April, TWICE would release their fifth EP &quot;What is Love&quest;&quot; along with their eponymous lead single which became a legendary song among Kpop circles. The EP sold over 300,000 copies, earnign TWICE platinum certification from the Korea Music Content Association for selling over 250,000 copies, being the first female act and fifth artist to do so. The music video for the lead single &quot;What is Love&quest;&quot; is currently the most viewed video on the official JYP Entertainment Youtube channel, reaching over 700 million views. The music video references several movies such as The Princess Diaries, Ghost, La La Land, Pulp Fiction, Romeo &plus; Juliet, Love Letter, La Boum, and Leon&colon; The Professional.</p>
+
+            <p>Starting from May 18th, TWICE embarked on their fourth concert tour, &quot;Twice 2nd Tour: Twiceland Zone 2 &ndash; Fantasy Park. The toured South Korea, Japan, Singapore, Thailand, and Indonesia.</p>
+
+            <p>In May 16, TWICE released their third Japanese single &quot;Wake Me Up&quot;. They recieved a Double Platinum certification for the single from the Recording Industry Association of Japan, being the first foreign act to do so.</p>
+
+            <p>On the 9th of July, TWICE released a reissue of &quot;What is Love&quest;&quot; titled &quot;Summer Nights&quot; along with its lead single &quot;Dance the Night Away&quot;. The single had over a 100,000 million streams and 2.5 million downloads on the Circle Music Charts. Thus TWICE earned their first platinum single certification for both streaming and downloads from the Korea Music Content Association.</p>
+
+            <p>On the 12th of September, TWICE released their first Japanese album &quot;BDZ&quot; alongside with its lead single of the same name. The album peaked at number one on the Oricon Albums Chart, setting the record for the highest first day album sales for a South Korean girl group in Japan with 89,721 units sold. They also topped the weekly ranking, making TWICE the fifth foreign female act to top both the weekly singles and album charts. Thus granting them their fifth platinum certification.</p>
+
+            <p>TWICE would embark on a Japanese concert tour from the 29th of September to the 17th of October, titled &quot;TWICE 1st Arena Tour 2018 &quot;BDZ&quot;&quot;. They performed in the cities of Chiba, Nagoya, Kobe, and Tokyo.</p>
+
+            <p>On the 5th of November, TWICE released their sixth EP &quot;Yes or Yes&quot; with the lead single of the same name. the music video for the single reached 31.4 million views in just 24 hours, making it the 7th biggest 24-hour Youtube debut of all time. On the 12th of December, TWICE released a reissue of &quot;Yes or Yes&quot; titled &quot;The Year of Yes&quot; along with its lead single &quot;The Best Thing I Ever Did&quot;.</p>
+        </section>
+
+        <section id = '7'>
+            <h2>7&colon; Changing Times</h2>
+
+            <img src = "images/fancyyou.jpg" alt = "Album cover of Fancy You" class = "fancy">
+            <p id = "imagetext">Album cover of Fancy You</p>
+
+            <p>For the past three years, TWICE&apos;s schedule has been hectic, moreso than other Kpop groups. In 2018 alone, they released 29 new songs and 5 mini albums. This would take a toll on the health of the members, but they had each other to rely on. And so things were about to change.</p>
+
+            <p>By 2019, the group has become 4 years old. As the members began to grow up, they realised that they could not continue making bubblegum pop songs, and so they began to mature their sound.</p>
             
-            if (diff < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "Zone has been released!"
+            <p>On the 6th of March 2019, TWICE released their second Japanese compilation album &quot;&num;Twice2&quot;. It debuted at number one on the daily ranking of the Oricon Albums Chart, breaking their previous record for highest first day album sales for a female Kpop girl group. They then became the first foreign female artist to sell more than 200,000 copies in the first week since Kara in 2011.</p>
+
+            <p>TWICE then hosted their &quot;Twice Dome Tour 2019 &quot;&num;Dreamday&quot;&quot; from Marth 20th to April 6th. They were the first ever female Kpop group to to hold a Japanese dome tour. They toured the cities of Osaka, Tokyo, and Nagoya. Tickets for the tour sold out in just one minute.</p>
+
+            <p>On the 22nd of April, TWICE released their seventh EP &quot;Fancy You&quot; alongside with what some consider to be their best single &quot;Fancy&quot;. The music video for the single reached a total of 42.1 millions in 24-hours, replacing the &quot;Yes or Yes&quot; music video as the seventh biggest Youtube debut in 24-hours. The song differs from their usual Bubblegum pop sound by using more bolder Electropop beats, with the vocals taking on a more mature tone but still keeping their upbeat energy.</p>
+
+            <p>On May 25th, TWICE embarked on their first ever world tour titled &quot;Twicelights World Tour&quot;, the tour was originally going to last till April 16th of 2020 but due to the COVID&ndash;19 Pandemic, the tour ended early on the 23rd of February 2020. They had 25 shows in total across South Korea, Thailand, the Philippines, Singapore, the USA, Mexico, Malaysia, and Japan.</p>
+
+            <p>Mina was not able to attend the concerts in Singapore, the USA, Mexico, and Malaysia due to being diagnosed with anxiety disorder, causing her to have extreme anxiety regarding on stage performances. This was unusual as South Korea tends to have a stigma towards mental health, especially that of idols, thus her hiatus helped to open a discussion regarding mental health in the Kpop Industry. Fortunately, in February 2020, her condition improved and she was able to return to perform live. Chaeyoung was also unable to participate in the Sapporo and Third Nagoya concert due to health issues.</p>
+
+            <p>On the 12th of June 2019, TWICE released two Japanese digital singles &quot;Happy Happy&quot; and &quot;Breakthrough&quot;. Both singles recieved platinum certification as expected.</p>
+
+            <p>On the 23rd September 2019, TWICE released their eighth EP &quot;Feel Special&quot; alongside what I consider to be their best single and best song of the same name. The single debuted at the top of the Billboard World Digital Song Sales Charts, and number 82 on the Canadian Hot 100, being the third Kpop girl group to appear on the chart. The single incorporates elements of Synth-pop, Miami bass, and House. The lyrics were written be JYP himself who based it on a dinner conversation he had with the group in which they expressed their struggles regarding fame throughout their four years of activity. He wrote this song in order to cheer on the members despite all the troubles their fame has brought upon them.</p>
+
+            <p>On November 20th, TWICE released their second Japanese album &quot;&amp;Twice&quot; which included the previously released digital singles &quot;Happy Happy&quot; and &quot;Breakthrough&quot; and the lead single &quot;Fake &amp; True&quot; which released earlier as a digital single on October 18th.</p>
+
+            <p>In just the year 2019, TWICE sold over a million albums for the third consecutive year. In Japan, TWICE sold over 5 billion yen worth of record sales, making them the bestselling foreign artist. Safe to say, TWICE has consolidated their position in South Korea and Japan as &quot;Asia&apos;s Girl Group&quot;.</p>
+        </section>
+
+        <section id = '8'>
+            <h2>8&colon; COVID-19</h2>
+
+            <img src = "images/docu.jpg" alt = "Promotional material for Twice: Seize the Light" class = "docu">
+            <p id = "imagetext">Promotional material for Twice&colon; Seize the Light</p>
+
+            <p>In 2020, TWICE halted part of their tour due to the COVID-19 Pandemic. In February 24 of the same year, TWICE signed with Republic Records for promotion in the USA as part of JYP&apos;s partnership with the label. On the 29th of April the documentary series, &quot;Twice&colon; Seize the Light&quot; premiered through Youtube Originals. The documentary covers TWICE&apos;s journey as trainees to their first ever world tour.</p>
+
+            <p>On the 1st of June, TWICE released their ninth Korean EP &quot;More &amp; More&quot; along with the lead single of the same name. In just a month, the album sold over 560,000 sales, making it TWICE&apos;s bestselling album to date and setting the record for the highest sales volume for a girl group in Circle Chart history. The album entered the Billboard Hot 200 at number 200, making TWICE the fifth South Korean girl group to do so, after Girls Generation, Girls Generation&ndash;TTS, 2NE1, and Blackpink. TWICE also entered the Billboard Artist 100 for the first time, debuting at number 96.</p>
+
+            <p>On the 9th of August, TWICE held their first ever online concert &quot;Twice&colon; World in a Day&quot;, they worked with the Beyond Live platform launched by SM Entertainment and Naver to host the concert. Thus, they became the first act outside of SM Entertainment to use the platform.</p>
+
+            <p>On the 16th of September, TWICE released their third Japanese album &quot;&num;Twice3&quot; which earned TWICE their seventh number one album on the Oricon Albums Chart. This made them the second female foreign artist to do so after BoA.</p>
+
+            <p>On the 17th of October, Jeongyeon took a hiatus from the group due to anxiety, she later returned on the 31st of January 2021 for the 30th Seoul Music Awards.</p>
+
+            <p>On the 26th of October, TWICE released their second Korean album &quot;Eyes Wide Open&quot; along with its lead single &quot;I Can&apos;t Stop Me&quot;. The album peaked at number 72 on the Billboard 200, making them the third Kpop girl group to break the top 100 of the chart after 2NE1 and Blackpink.</p>
+
+            <p>On the 6th of November, the virtual girl group K&sol;DA with TWICE members Nayeon, Sana, Jihyo, and Chaeyoung being featured on the song &quot;I&apos;ll Show You&quot; as part of K&sol;DA&apos;s first EP &quot;All Out&quot;.</p>
+
+            <p>TWICE released their seventh Japanese single &quot;Better&quot; on the 11th of November. On December 6, TWICE performed at the 2020 MNET Asian Music Awards where they suprised fans with a performance of their unreleased track &quot;Cry for Me&quot;. It is a song that explores heartbreak of the other party not showing any emotion after a breakup. The song was officially released as a digital single twelve days later and peaked at the top of the Billboard World Digital Song Sales Chart. The song further seperates TWICE from their original cutesy and youthful image and veers more towards a darker, more mature concept.</p>
+
+            <p>The song would catapult them to success in the West, they would go on to &quot;The Kelly Charkson Show&quot; to showcase the song. This would set a precedent whereby TWICE will always appear on an American talk show during every comeback season.</p>
+        </section>
+        
+        <section id = '9'>
+            <h2>9&colon; Present Day</h2>
+
+            <img src = "images/moonlight.jpg" alt = "Moonlight Sunrise Cover Art" class = "moon">
+            <p id = "imagetext">Moonlight Sunrise Cover Art</p>
+
+            <p>TWICE held their second online concert titled &quot;Twice in Wonderland&quot; on March 6th. TWICE partered with the Japanese mobile phone operator NTT Docomo. The concert used augmented reality and mixed reality technologies during the broadcast. At the end of the concert, they announced the release of their next Japanese single.</p>
+
+            <p>That single titled &quot;Kura Kura&quot; was released on the 12th of May. On the 11th of June, TWICE released their tenth EP &quot;Taste of Love&quot; with the album&apos;s single &quot;Alcohol Free&quot; being released two days earlier. The EP sold 46,000 units, making it the bestselling album in the USA during its debut week. The EP peaked at number 6 on the Billboard 200, being the first Kpop girl group to chart an EP in the top ten of the chart.</p>
+
+            <p>The group&apos;s third Japanese studio album &quot;Perfect World&quot; released on the 28th of July, including the title track &quot;Perfect World&quot;. The song also featured the previous Japanese singles &quot;Fanfare&quot;, &quot;Kura Kura&quot;, and &quot;Better&quot;.</p>
+
+            <p>TWICE released their first ever English single &quot;The Feels&quot; on the 1st of October. The single debuted at number 83 on the Billboard Hot 100, being the first time the group charted on the chart.</p>
+
+            <p>Soon after the the release of their first English single, TWICE released their third Korean studio album &quot;Formula of Love&colon; O&plus;T&equals;&lt;3&quot; alongside its title track &quot;Scientist&quot;. The album peaked at number three on the Billboard 200, breaking their previous record set by &quot;Taste of Love&quot;. On the 3rd of December, TWICE released their ninth Japanese single &quot;Doughnut&quot; which incorporates elements of Japanese City Pop into the track.</p>
+
+            <p>Unfortunately, Jeongyeon took a second hiatus from August 2021 to February 2022 due to panic and anxiety disorder. Meanwhile, TWICE embarked on their second worldwide concert tour from Christmas Day 2021 to the 15th of May 2022. They toured the countries of South Korea, Japan, and the USA. Jeongyeon was not able to participate in the concert in Korea due to her aforementioned hiatus.</p>
+
+            <p>Nayeon would debut as a soloist on the 24th of June 2022 with her first mini album &quot;Im Nayeon&quot; alongside its lead single &quot;Pop&excl;&quot;. The album featured collaborations with Felix from Stray Kids and Wonstein. The album calls back to the earlier youthful concept that TWICE had during their early years whilst retaining some elements of their current style.</p>
+
+            <p>On the 12th of July 2022, all the members of TWICE renewed their seven year contact with JYP Entertainment. Although the details of the renewal are unknown, it is likely that it included more breaks for the group as they have been not given much time to rest during their seven year tenure. Soon after on the 27th of July, TWICE released their fourth Japanese album &quot;Celebrate&quot; with the title track of the same name.
+                
+            <p>On August 28th of that year, TWICE released their eleventh EP &quot;Between 1 &amp; 2&quot; alongside its lead single &quot;Talk That Talk&quot;. The album had more than a million pre&ndash;orders, the third female kpop group to do so after Blackpink and Aespa. On the 20th of January 2023, TWICE pre-released their second English single &quot;Moonlight Sunrise&quot;, the single included elements of House and Synth-Pop wrapped up in a dreamy like concept.</p>
+
+            <p>On the 10th of March, TWICE released their twelfth EP &quot;Ready to Be&quot; alongside the lead single &quot;Set Me Free&quot;. The EP also included the single &quot;Moonlight Sunrise&quot;. On the 31st of May, TWICE released their tenth Japanese single &quot;Hare Hare&quot;</p>
+
+            <p>Begining on the 15th of April 2023, TWICE embarked on their third worldwide concert tour. They will tour the countries of South Korea, Australia, the USA, Canada, Singapore, the UK, France, Germany, Thailand and the Philippines, making this TWICE&apos;s most extensive tour to date. They also became the first Kpop girl group to tour at a U.S stadium.</p>
+
+            <p>In February 2023, the sub&ndash;unit &quot;MiSaMo&quot; was formed, comprising of the group&apos;s Japanese members, Mina, Sana, and Momo. On the 26th of July, 2023, MiSaMo released their debut EP &quot;Masterpiece&quot; alongside its title track &quot;Do Not Touch&quot;.</p>
+        </section>
+
+        <script>
+            var goback = document.getElementById("back");
+
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20) {
+                    goback.style.display = "block";
+                } else if (document.documentElement.scrollTop > 20) {
+                    goback.style.display = "block";
+                } else {
+                    goback.style.display = "none";
+                }
             }
-        }, 1000);
 
-        //Code adapted from W3 Schools
-
-    </script>
-</head>
-<body>
-    <div>
-        <h1>Release of ZONE by Jihyo</h1>
-        <p id = 'countdown'></p>
-    </div>
-</body>
+            //Code adapted from W3 Schools 
+        </script>
+    </body>
+    
+    <footer>
+        <p id="rights">Logo belongs to JYP Entertainemnt</p>
+        <p id="rights">All Album Covers belongs to JYP Entertainemnt</p>
+        <p id="rights">Adapted from Wikipedia and kpopping.com</p>
+    </footer>
 </html>
