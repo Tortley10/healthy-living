@@ -87,3 +87,7 @@
   h1 {
     text-align: center;
   }
+
+  p {
+    clear: both;
+  }
