@@ -10,25 +10,18 @@
 
         <script>
             var release = new Date().getTime() + 2000;
-        
-            // Sets the countdown date
 
             var x = setInterval(function() {
 
                 var now = new Date().getTime();
 
-                // Gets current date
-
                 var diff = release - now;
-
-                // Finds the distance between now and the release date
                 
                 if (diff < 1000) {
                     countdown.style.display = "block";
                     clearInterval(x);
                     document.getElementById("countdown").innerHTML = "Your Mother is Gay"
                 }
-
             }, 1000);
 
         </script>
