@@ -19,10 +19,6 @@
   color: black;
 }
 
-.links {
-  text-decoration: none;
-}
-
 header {
   position: fixed;
   top: 0;
@@ -230,5 +226,4 @@ section {
   section {
     padding: 100px 9%;
   }
-}
 }
