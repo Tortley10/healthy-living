@@ -12,3 +12,20 @@ body {
   min-height: 100vh;
   background-color: #f4f4f4;
 }
+
+.wrapper {
+  width: 420px;
+}
+
+.wrapper h1 {
+  font-size: 2.2em;
+  text-align: center;
+}
+
+.wrapper div {
+  margin: 30px auto;
+}
+
+.login-btn {
+    padding: 30px;
+}
