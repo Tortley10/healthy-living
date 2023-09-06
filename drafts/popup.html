@@ -9,7 +9,7 @@
         <link rel="stylesheet" type= "text/css" href="fancy.css">
 
         <script>
-            var release = new Date().getTime() + 1000;
+            var release = new Date().getTime() + 2000;
         
             // Sets the countdown date
 
@@ -23,14 +23,13 @@
 
                 // Finds the distance between now and the release date
                 
-                if (diff < 0) {
+                if (diff < 1000) {
                     countdown.style.display = "block";
                     clearInterval(x);
                     document.getElementById("countdown").innerHTML = "Your Mother is Gay"
                 }
-            }, 1000);
 
-            //Code adapted from W3 Schools
+            }, 1000);
 
         </script>
     </head>
