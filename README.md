@@ -1,4 +1,4 @@
-**Healthy Living**
+**Healthy Living: Healthier**
 Code Overflow Hackathon.
 
 Theme: Leveraging Technology to Encourage and Promote Healthy Living
