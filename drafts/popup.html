@@ -9,7 +9,7 @@
         <link rel="stylesheet" type= "text/css" href="fancy.css">
 
         <script>
-            var release = new Date().getTime() + 2000;
+            var release = new Date().getTime() + 1000;
 
             var x = setInterval(function() {
 
@@ -17,12 +17,14 @@
 
                 var diff = release - now;
                 
-                if (diff < 1000) {
+                if (diff < 0) {
                     countdown.style.display = "block";
                     clearInterval(x);
                     document.getElementById("countdown").innerHTML = "Your Mother is Gay"
                 }
             }, 1000);
+
+            
 
         </script>
     </head>
