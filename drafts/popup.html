@@ -3,37 +3,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        <script>
-            var release = new Date("18 August, 2023 13:00:00").getTime();
+    <script>
+        var release = new Date("18 August, 2023 13:00:00").getTime();
 
-            // Sets the countdown date
+        // Sets the countdown date
 
-            var x = setInterval(function() {
+        var x = setInterval(function() {
 
-                var now = new Date().getTime();
+            var now = new Date().getTime();
 
-                // Gets current date
+            // Gets current date
 
-                var diff = release - now;
+            var diff = release - now;
 
-                // Finds the distance between now and the release date
+            // Finds the distance between now and the release date
 
-                var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-                document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-                
-                if (diff < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "Zone has been released!"
-                }
-            }, 1000);
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+            
+            if (diff < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "Zone has been released!"
+            }
+        }, 1000);
 
-            //Code adapted from W3 Schools
+        //Code adapted from W3 Schools
 
-        </script>
+    </script>
 </head>
 <body>
     <div>
