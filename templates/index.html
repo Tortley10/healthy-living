@@ -1,4 +1,7 @@
 {% extends "layout.html" %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'styles.css') }}">
+{% endblock %}
 {% block content %}
 <header>
     <a href="#" class="logo">Healthier</a>
@@ -12,7 +15,6 @@
     </ul>
 </header>
 <!-- Home Section -->
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'styles.css') }}">
 <section class="home" id="home">
     <div class="hometxt">
         <h1>Healthier.</h1>
