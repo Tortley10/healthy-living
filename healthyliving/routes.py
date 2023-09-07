@@ -61,3 +61,11 @@ def logout():
 @app.route("/account")
 def account():
     return render_template("account.html", title = 'Account')
+
+@app.route("/quiz")
+def quiz():
+    return render_template("quiz.html", title = 'Quiz')
+
+@app.route("/leaderboard")
+def leaderboard():
+    return render_template("leaderboard.html", title = 'Leaderboard')

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'styles1.css') }}">
+<script defer src="{{ url_for('static', filename = 'script.js') }}"></script>
+{% endblock %}
+{% block content %}
+<div class="container">
+  <h1 id = 'starttitle'>Quiz</h1>
+  <div id="question-container" class="hide">
+    <div id="question">Question</div>
+    <div id="answer-buttons" class="btn-grid">
+      <button class="btn"></button>
+      <button class="btn"></button>
+      <button class="btn"></button>
+      <button class="btn"></button>
+    </div>
+  </div>
+  <div class="controls">
+    <button id="start-btn" class="start-btn btn">Start</button>
+    <button id="next-btn" class="next-btn btn hide">Next</button>
+  </div>
+</div>
+{% endblock %}
