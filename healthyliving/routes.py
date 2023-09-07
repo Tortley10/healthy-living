@@ -69,3 +69,7 @@ def quiz():
 @app.route("/leaderboard")
 def leaderboard():
     return render_template("leaderboard.html", title = 'Leaderboard')
+
+@app.route("/calculator")
+def calculator():
+    return render_template("jd_partialedit_calcalc.html", title = 'Calculator')

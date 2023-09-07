@@ -1,54 +1,4 @@
-<head>
-    <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- CSS -->
-        <link rel="stylesheet" href="style.css">
-        <title>Simple Calorie Calculator using JavaScript - @code.scientist x @codingtorque</title>
-    </head>
-    <body>
-        <div id="bmr-calculator" class="wrapper">
-        <div class="calculator">
-            <div class="choose-gender">
-                <div class="segmented-control"><input id="calc-gender-male" type="radio" name="gender" value="male"
-                        checked=""><label for="calc-gender-male">Male</label></div>
-                <div class="segmented-control">
-                    <input id="calc-gender-female" type="radio" name="gender" value="female"><label
-                        for="calc-gender-female">Female</label>
-                </div>
-            </div>
-            <label for="calc-age" id="calc-age_value">Age: </label>
-            <input id="calc-age" type="text" value="25" min="13" max="100"><br>
-            <label for="calc-height" id="calc-height_value">Height: </label>
-            <input id="calc-height" type="text" value="180" min="80" max="250">cm<br>
-            <label for="calc-weight" id="calc-weight_value">Weight: </label>
-            <input id="calc-weight" type="text" value="70" min="40" max="200">kg<br>
-            <label for="calc-walking" id="calc-walking_value">Walking: </label>
-          <input id="calc-walking" type="text" value="2" min="0" max="50">hours per week<br>
-            <label for="calc-cardio" id="calc-cardio_value">Cardio: </label>
-            <input id="calc-cardio" type="text" value="1" min="0" max="50">hour per week<br>
-        </div>
-        <div class="results">
-            <div id="calc-target-gain">
-                To Gain Weight:<br>
-                <span>2500 calories</span>
-            </div>
-            <div id="calc-target-maintain">
-                To Maintain:<br>
-                <span>2200 calories</span>
-            </div>
-            <div id="calc-target-lose">
-                To Lose Weight:<br>
-                <span>1700 calories</span>
-          </div>
-        </div>
-    </div> 
-        <script src="https://code.jquery.com/jquery-3.6.3.js"
-            integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-        <script src="script.js"></script>
-    </body>
-    </html>
-
+{% block head %}
 <style>
     :root {
   --primary-color: #435fda;
@@ -243,3 +193,48 @@ input[type="range"]::-moz-range-thumb {
     $("#calc-target-lose span").html(targetLoseWeight + " calories");
 });
 </script>
+{% endblock %}
+{% block content %}
+    <body>
+        <div id="bmr-calculator" class="wrapper">
+        <div class="calculator">
+            <div class="choose-gender">
+                <div class="segmented-control"><input id="calc-gender-male" type="radio" name="gender" value="male"
+                        checked=""><label for="calc-gender-male">Male</label></div>
+                <div class="segmented-control">
+                    <input id="calc-gender-female" type="radio" name="gender" value="female"><label
+                        for="calc-gender-female">Female</label>
+                </div>
+            </div>
+            <label for="calc-age" id="calc-age_value">Age: </label>
+            <input id="calc-age" type="text" value="25" min="13" max="100"><br>
+            <label for="calc-height" id="calc-height_value">Height: </label>
+            <input id="calc-height" type="text" value="180" min="80" max="250">cm<br>
+            <label for="calc-weight" id="calc-weight_value">Weight: </label>
+            <input id="calc-weight" type="text" value="70" min="40" max="200">kg<br>
+            <label for="calc-walking" id="calc-walking_value">Walking: </label>
+          <input id="calc-walking" type="text" value="2" min="0" max="50">hours per week<br>
+            <label for="calc-cardio" id="calc-cardio_value">Cardio: </label>
+            <input id="calc-cardio" type="text" value="1" min="0" max="50">hour per week<br>
+        </div>
+        <div class="results">
+            <div id="calc-target-gain">
+                To Gain Weight:<br>
+                <span>2500 calories</span>
+            </div>
+            <div id="calc-target-maintain">
+                To Maintain:<br>
+                <span>2200 calories</span>
+            </div>
+            <div id="calc-target-lose">
+                To Lose Weight:<br>
+                <span>1700 calories</span>
+          </div>
+        </div>
+    </div> 
+        <script src="https://code.jquery.com/jquery-3.6.3.js"
+            integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+    </html>
+{% endblock %}
