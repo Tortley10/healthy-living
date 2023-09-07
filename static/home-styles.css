@@ -6,6 +6,8 @@
   scroll-behavior: smooth;
   list-style: none;
   text-decoration: none;
+  background: #f4f4f4;
+  color: black;
 }
 
 :root {
@@ -16,11 +18,6 @@
 
 ::-webkit-scrollbar {
   display: none;
-}
-
-* {
-  background: #f4f4f4;
-  color: black;
 }
 
 header {
