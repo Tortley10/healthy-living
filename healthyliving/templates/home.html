@@ -10,7 +10,6 @@
         <ul class="navigation">
             <li><a href="{{ url_for('quiz') }}" class="invis text-decoration-none">Quiz</a></li>
             <li><a href="{{ url_for('leaderboard') }}" class="invis text-decoration-none">Leaderboard</a></li>
-            <li><a class="text-decoration-none" href="{{ url_for('account') }}">Account</a></li>
             <li><a id="login" href="{{ url_for('logout') }}" class="text-decoration-none">Logout</a></li>
         </ul>
     </header>
@@ -25,19 +24,19 @@
     <div class="front-homec">
         <div class="box">
             <a href="{{ url_for('calculator') }}"><img src="{{ image_fit }}"></a>
-            <a href="{{ url_for('calculator') }}"><h3 class="fw-bold">Fitness Calculators</h3></a>
-            <p>Healthier provides you with a variety of fitness calculators and calculations. All you have to do is click the picture above to explore a new world of fitness.</p>
+            <a href="{{ url_for('calculator') }}"><h3 class="fw-bold">Fitness Calculator</h3></a>
+            <p>Healthier provides you with a calorie calculator. All you have to do is click the picture above to explore a new world of fitness.</p>
         </div>
         <div class="box">
-            <a href="www.youtube.com"><img src="{{ image_apple }}"></a>
-            <h3 class="fw-bold">Healthy Eating</h3>
+            <a href="https://www.youtube.com/watch?v=Gmh_xMMJ2Pw" target="_blank"><img src="{{ image_apple }}"></a>
+            <a href="https://www.youtube.com/watch?v=Gmh_xMMJ2Pw" target="_blank"><h3 class="fw-bold">Healthy Eating</h3></a>
             <p>Healthier teaches you on how to construct a healthy and balanced meal that will help you in your
                 journey to become as healthy as you can be. All you have to do is click the picture above!</p>
         </div>
         <div class="box">
-            <img src="{{ image_sleep }}">
-            <h3 class="fw-bold">Sleeping Habits</h3>
-            <p>Healthier provides you with information on how to improve your sleeping habits. All you have to do is click the picture above!</p>
+            <a href="https://www.youtube.com/watch?v=fk-_SwHhLLc" target="_blank"><img src="{{ image_sleep }}"></a>
+            <a href="https://www.youtube.com/watch?v=fk-_SwHhLLc" target="_blank"><h3 class="fw-bold">Sleeping Habits</h3></a>
+            <p>Want to learn how to improve your sleeping habits? All you have to do is click the picture above!</p>
         </div>
     </div>
 </section>
@@ -48,11 +47,11 @@
         <img src="{{ image_comm }}">
     </div>
     <div class="blogtxt">
-        <span>Blog Spot</span>
-        <h2 class="fw-bold">Community Posts</h2>
-        <p>Talk to like-minded individuals, share your journey, make new friends. All here at Healthier's Blog Spot.
+        <span>Quiz</span>
+        <h2 class="fw-bold">Quizzes?</h2>
+        <p>Take the quiz and appear on our leaderboard!
         </p>
-        <a href="#" class="button text-decoration-none">Click here to start blogging!</a>
+        <a href="{{ url_for('quiz') }}" class="button text-decoration-none">Click here to start!</a>
     </div>
 </section>
 {% with messages = get_flashed_messages(with_categories = true) %}

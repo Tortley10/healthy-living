@@ -1,10 +1,10 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: Gotham Rounded;
+    font-family: "Poppins", sans-serif;
   }
   
   :root {
-    --hue-neutral: 200;
+    --hue-neutral: 39;
     --hue-wrong: 0;
     --hue-correct: 145;
   }
