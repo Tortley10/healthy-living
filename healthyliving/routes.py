@@ -4,10 +4,6 @@ from healthyliving.forms import RegistrationForm, LoginForm
 from healthyliving.models import User
 from flask_login import login_user, current_user, logout_user
 
-@app.route("/")
-def hello():
-    return redirect(url_for('index'))
-
 @app.route("/index")
 def index():
     css = url_for('static', filename='styles.css')
