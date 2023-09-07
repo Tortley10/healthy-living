@@ -10,10 +10,11 @@ def hello():
 
 @app.route("/index")
 def index():
+    css = url_for('static', filename='styles.css')
     image_veg = url_for('static', filename='images/Picture of Vegetable (1).png')
     image_about = url_for('static', filename='images/About Picture.png')
     image_sleep = url_for('static', filename='images/Sleeping Picture.png')
-    return render_template("index.html", image_veg = image_veg, image_about = image_about, image_sleep = image_sleep)
+    return render_template("index.html", image_veg = image_veg, image_about = image_about, image_sleep = image_sleep, css = css)
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
