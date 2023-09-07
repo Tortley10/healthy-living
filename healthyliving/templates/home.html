@@ -14,14 +14,14 @@
         </ul>
     </header>
     <!-- About Us Section-->
-<section class="front-home" id="front-home">
+<section class="about" id="about">
     <br>
     <div class="template-header mt-5">
         <span>Welcome!</span>
         <h2 class="fw-bold">Welcome to Healthier</h2>
         <p>Feel free to make the most out of the services we offer.</p>
     </div>
-    <div class="front-homec">
+    <div class="aboutc">
         <div class="box">
             <img src="{{ image_fit }}">
             <h3 class="fw-bold">Fitness Calculators</h3>
@@ -42,11 +42,11 @@
 </section>
 
 <!-- Blog Section-->
-<section class="blog" id="blog">
-    <div class="blogimg">
+<section class="goal" id="goal">
+    <div class="goalimg">
         <img src="{{ image_comm }}">
     </div>
-    <div class="blogtxt">
+    <div class="goaltxt">
         <span>Blog Spot</span>
         <h2 class="fw-bold">Community Posts</h2>
         <p>Talk to like-minded individuals, share your journey, make new friends. All here at Healthier's Blog Spot.
@@ -54,7 +54,7 @@
         <a href="#" class="button text-decoration-none">Click here to start blogging!</a>
     </div>
 </section>
-{% with messages = get_flashed_messages(with_categories = true) %}
+    {% with messages = get_flashed_messages(with_categories = true) %}
         {% if messages %}
             {% for category, message in messages %}
                 <div class="alert alert-{{ category }}">
