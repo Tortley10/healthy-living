@@ -1,5 +1,29 @@
-1. How much water should a man drink per day:
-3.7 Litres (Correct)
-2.7 Litres
-4.0 Litres
-3.0 Litres
+1. How much water should a man drink per day?:
+    3.7 Litres (Correct)
+    2.7 Litres
+    4.0 Litres
+    3.0 Litres
+
+2. What is the recommended amount of excercise for the average adult?
+    150 minutes of moderate aerobic activity a week (Correct)
+    75 minutes of moderate aerobic activity a week
+    250 minutes of moderate aerobic activity a week
+    100 minutes of moderate aerobic activity a week
+
+3. What is the recommended daily Calcium intake for adults?
+    800 mg (Correct)
+    500 mg
+    1000mg
+    600mg
+
+4. What is a healthy BMI for adults 20 years old and older?
+    18.5 – 24.9 (Correct)
+    21.4 - 25.9
+    17.6 - 23.8
+    18.5 - 26.7
+
+5. Which food items are rich in protein?
+    Eggs (Correct)
+    Brocolli
+    White Rice
+    Ice Cream
