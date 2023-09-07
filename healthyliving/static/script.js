@@ -88,12 +88,12 @@ const questions = [
     ]
 },
 {
-    question: 'What is the recommended amount of excercise for the average adult?',
+    question: 'What is the recommended amount of excercise (moderate aerobic activity) for the average adult?',
     answers: [
-    { text: '75 minutes of moderate aerobic activity a week', correct: false },
-    { text: '100 minutes of moderate aerobic activity a week', correct: false },
-    { text: '150 minutes of moderate aerobic activity a week', correct: true },
-    { text: '250 minutes of moderate aerobic activity a week', correct: false }
+    { text: '75 minutes of  a week', correct: false },
+    { text: '100 minutes of a week', correct: false },
+    { text: '150 minutes of a week', correct: true },
+    { text: '250 minutes of a week', correct: false }
     ]
 },
 {
