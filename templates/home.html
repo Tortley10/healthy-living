@@ -1,6 +1,61 @@
 {% extends "layout.html" %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'home-styles.css') }}">
+{% endblock %}
 {% block content %}
-    {% with messages = get_flashed_messages(with_categories = true) %}
+    <header>
+        <a href="#" class="logo text-decoration-none fw-semibold">Healthier</a>
+        <div class="bx bx-menu" id="div1"></div>
+
+        <ul class="navigation">
+            <li><a href="#home" class="invis text-decoration-none">Home</a></li>
+            <li><a class="text-decoration-none" href="{{ url_for('account') }}">Account</a></li>
+            <li><a id="login" href="#" class="text-decoration-none">Logout</a></li>
+        </ul>
+    </header>
+    <!-- About Us Section-->
+<section class="front-home" id="front-home">
+    <br>
+    <div class="template-header mt-5">
+        <span>Welcome!</span>
+        <h2 class="fw-bold">Welcome to Healthier</h2>
+        <p>Feel free to make the most out of the services we offer.</p>
+    </div>
+    <div class="front-homec">
+        <div class="box">
+            <img src="{{ image_about }}">
+            <h3 class="fw-bold">Get Fit</h3>
+            <p>Healthier provides you with different recommendations on how to keep in shape according to your
+                specific needs.</p>
+        </div>
+        <div class="box">
+            <a href="www.youtube.com"><img src="{{ image_v }}"></a>
+            <h3 class="fw-bold">Eat Healthy</h3>
+            <p>Healthier teaches you on how to construct a healthy and balanced meal that will help you in your
+                journey to become as healthy as you can be.</p>
+        </div>
+        <div class="box">
+            <img src="{{ image_sleep }}">
+            <h3 class="fw-bold">Sleeping Habits</h3>
+            <p>Healthier provides you with information on how to improve your sleeping habits.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Section-->
+<section class="blog" id="blog">
+    <div class="blogimg">
+        <img src="{{ image_comm }}">
+    </div>
+    <div class="blogtxt">
+        <span>Blog Spot</span>
+        <h2 class="fw-bold">Community Posts</h2>
+        <p>Talk to like-minded individuals, share your journey, make new friends. All here at Healthier's Blog Spot.
+        </p>
+        <a href="#" class="button text-decoration-none">Click here to start blogging!</a>
+    </div>
+</section>
+{% with messages = get_flashed_messages(with_categories = true) %}
         {% if messages %}
             {% for category, message in messages %}
                 <div class="alert alert-{{ category }}">
@@ -9,5 +64,4 @@
             {% endfor %}
         {% endif %}
     {% endwith %}
-<h1>Homepage :D</h1>
 {% endblock content %}

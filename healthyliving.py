@@ -32,7 +32,11 @@ def login():
 
 @app.route("/home")
 def home():
-    return render_template("home.html")
+    image_v = url_for('static', filename='images/Picture of Vegetable (1).png')
+    image_about = url_for('static', filename='images/About Picture.png')
+    image_sleep = url_for('static', filename='images/Sleeping Picture.png')
+    image_comm = url_for('static', filename='images/Community Picture.png')
+    return render_template("home.html", image_v = image_v, image_about = image_about, image_sleep = image_sleep, image_comm = image_comm)
 
 @app.route("/account")
 def account():
