@@ -36,7 +36,9 @@ def home():
     image_about = url_for('static', filename='images/About Picture.png')
     image_sleep = url_for('static', filename='images/Sleeping Picture.png')
     image_comm = url_for('static', filename='images/Community Picture.png')
-    return render_template("home.html", image_v = image_v, image_about = image_about, image_sleep = image_sleep, image_comm = image_comm)
+    image_fit = url_for('static', filename='images/Fitness Picture.png')
+    image_apple = url_for('static', filename='images/Apple Picture.png')
+    return render_template("home.html", image_v = image_v, image_about = image_about, image_sleep = image_sleep, image_comm = image_comm, image_fit = image_fit, image_apple = image_apple)
 
 @app.route("/account")
 def account():

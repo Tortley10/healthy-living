@@ -247,13 +247,3 @@ section {
 .mt-5 {
   margin-top: 10rem;
 }
-
-img {
-  mix-blend-mode: locomotive;
-  transition: 0.5s;
-}
-
-img:hover {
-  mix-blend-mode: normal;
-  transition: 0.5s;
-}
