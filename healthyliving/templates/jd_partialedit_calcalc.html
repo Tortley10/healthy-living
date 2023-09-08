@@ -6,7 +6,7 @@
   --body-font-size: 16px;
   --line-height: 1.5;
   --content-width: 480px;
-  --background-color: azure;
+  --background-color: #f4f4f4;
   --background-color-secondary: #f8f8f9;
   --text-color: #060914;
   --text-color--muted: #71737f;
@@ -30,12 +30,17 @@ html {
   color: var(--text-color);
 }
 body {
-  font-family: "Geomanist", sans-serif;
+  font-family: "Poppins", sans-serif !important;
   font-size: var(--body-font-size);
   line-height: var(--line-height);
   padding: 0.5em 0.5em 2em 0.5em;
   margin: 0;
 }
+
+#title-calc {
+  text-align: center;
+}
+
 .wrapper {
   max-width: var(--content-width);
   margin: calc(var(--line-height) * 0.5em) auto 0 auto;
@@ -86,41 +91,16 @@ body {
   font-weight: 500;
   color: var(--text-color);
 }
-/* The crazy stuff that needs to be here for the custom input styling */
-input[type="range"] {
-  -webkit-appearance: none;
-  margin: 18px 0;
+input[type=text], select {
   width: 100%;
-  transition: all 0.265ms ease-out;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
-input[type="range"]:not(:last-of-type) {
-  margin-top: 0;
-  margin-bottom: 2.5em;
-}
-input[type="range"]:focus {
-  outline: none;
-}
-input[type="range"]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 6px;
-  cursor: pointer;
-  background: var(--line-color);
-}
-input[type="range"]::-webkit-slider-thumb {
-  box-shadow: 0 0 8px 1px var(--secondary-color),
-    0 0 16px 4px var(--background-color);
-  border: 3px solid #fff;
-  height: 24px;
-  width: 24px;
-  border-radius: 50%;
-  background: var(--secondary-color);
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -8px;
-}
-input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: var(--secondary-color);
-}
+
 input[type="radio"] {
   -webkit-appearance: none;
   display: none;
@@ -149,24 +129,7 @@ input[type="radio"] {
 .segmented-control:last-child input[type="radio"]:checked + label {
   border-radius: 0 0.5em 0.5em 0;
 }
-input[type="range"]::-moz-range-track {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  background: var(--line-color);
-}
-input[type="range"]::-moz-range-thumb {
-  box-shadow: 0 0 8px 1px var(--secondary-color),
-    0 0 16px 4px var(--background-color);
-  border: 3px solid #fff;
-  height: 24px;
-  width: 24px;
-  border-radius: 50%;
-  background: var(--secondary-color);
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -8px;
-}
+
 </style>
 
 <script>
@@ -196,6 +159,7 @@ input[type="range"]::-moz-range-thumb {
 {% endblock %}
 {% block content %}
     <body>
+    <h1 id="title-calc">Calorie intake per Day</h1>
         <div id="bmr-calculator" class="wrapper">
         <div class="calculator">
             <div class="choose-gender">
@@ -208,14 +172,14 @@ input[type="range"]::-moz-range-thumb {
             </div>
             <label for="calc-age" id="calc-age_value">Age: </label>
             <input id="calc-age" type="text" value="25" min="13" max="100"><br>
-            <label for="calc-height" id="calc-height_value">Height: </label>
-            <input id="calc-height" type="text" value="180" min="80" max="250">cm<br>
-            <label for="calc-weight" id="calc-weight_value">Weight: </label>
-            <input id="calc-weight" type="text" value="70" min="40" max="200">kg<br>
-            <label for="calc-walking" id="calc-walking_value">Walking: </label>
-          <input id="calc-walking" type="text" value="2" min="0" max="50">hours per week<br>
-            <label for="calc-cardio" id="calc-cardio_value">Cardio: </label>
-            <input id="calc-cardio" type="text" value="1" min="0" max="50">hour per week<br>
+            <label for="calc-height" id="calc-height_value">Height (cm): </label>
+            <input id="calc-height" type="text" value="180" min="80" max="250"><br>
+            <label for="calc-weight" id="calc-weight_value">Weight (kg): </label>
+            <input id="calc-weight" type="text" value="70" min="40" max="200"><br>
+            <label for="calc-walking" id="calc-walking_value">Walking (hours per week): </label>
+          <input id="calc-walking" type="text" value="2" min="0" max="50"><br>
+            <label for="calc-cardio" id="calc-cardio_value">Cardio (hour per week): </label>
+            <input id="calc-cardio" type="text" value="1" min="0" max="50"><br>
         </div>
         <div class="results">
             <div id="calc-target-gain">
